@@ -1,5 +1,5 @@
 {
-  "name": "bot-whatsapp",
+  "name": "chatbot-whatsapp",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -27,6 +27,7 @@
     "ora": "^6.1.2",
     "qr-image": "^3.2.0",
     "qrcode-terminal": "^0.12.0",
-    "stormdb": "^0.6.0"
+    "stormdb": "^0.6.0",
+    "whatsapp-web.js": "^1.17.1"
   }
 }
