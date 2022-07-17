@@ -1,0 +1,56 @@
+[
+    {
+        "keywords":  [
+            "hello"
+        ],
+        "key": "STEP_1"
+    },
+    {
+        "keywords":  [
+            "agenda"
+        ],
+        "key": "STEP_2"
+    },
+    {
+        "keywords":  [
+        "1- Antel arena",
+        "2- Hospital de clinicas",
+        "3- Hospital Maciel",
+        "1",
+        "2",
+        "3",
+        "antel arena",
+        "hospital de clinica",
+        "hospital de clinicas",
+        "hospital de clínicas",
+        "hospital maciel"
+    ],
+        "key": "STEP_2_1"
+    },
+    {
+        "keywords":  [
+        "example@hotmail.com"
+    ],
+        "key": "STEP_2_2"
+    },
+    {
+        "keywords":  [
+            "muchas gracias",
+            "ok",
+            "gracias",
+            "vale gracias"
+        ],
+        "key": "STEP_3"
+    },
+    {
+        "keywords":  [
+            "info",
+            "informacion",
+            "información",
+            "github",
+            "mas info",
+            "tu github"
+        ],
+        "key": "STEP_4"
+    }
+]

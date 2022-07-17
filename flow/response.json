@@ -1,0 +1,70 @@
+{
+    "DEFAULT":{
+        "replyMessage":[
+            "👨🏼‍🔧 🚧 *Disculpe* 🚧 estamos trabajando en la construcción de este CHATBOT 🤖,\n",
+            "esta es una respuesta default.\n",
+            "Prueba escribiendo *hello* \n"
+        ],
+        "media":null,
+        "trigger":null
+    },
+    "STEP_0":{
+        "replyMessage":[
+            "El flujo ha finalizado \n",
+            "gracias por utilizarme"
+        ],
+        "media":null,
+        "trigger":null
+    },
+    "STEP_1":{
+        "replyMessage":[
+            "Hola! ✌️ Bienvenido a este 🤖 CHATBOT de Whatsapp, lo primero \n",
+            "decirte que mi nombre es *Matias López*😎  \n",
+            "\n Si necesitas ver más info sobre las diferentes funciones",
+            "escribe *agenda*, *info*"
+        ],
+        "media":null,
+        "trigger":null
+    },
+    "STEP_2":{
+        "replyMessage":[
+            "Podrias brindarme tu nombre y apellido.\n",
+            "Ejemplo: Juan Peréz",
+            "😎😎😎"
+        ],
+        "media":null,
+        "trigger":null
+    },
+    "STEP_2_1":{
+        "replyMessage":[
+            "¿Cuál lugar prefiere para vacunarse?\n",
+            "*1- Antel arena*\n",
+            "*2- Hospital de clinicas*\n",
+            "*3- Hospital Maciel*"
+        ],
+        "media":null,
+        "trigger":null
+    },
+    "STEP_2_2":{
+        "replyMessage":[
+            "¿Un mail de contacto?"
+        ],
+        "media":null,
+        "trigger":null
+    },
+    "STEP_3":{
+        "replyMessage":[
+            "Gracias a ti! \n"
+        ],
+        "media":"https://cnnespanol.cnn.com/wp-content/uploads/2019/07/screen-shot-2019-07-04-at-9.31.04-pm.png",
+        "trigger":null
+    },
+    "STEP_4":{
+        "replyMessage":[
+            "Para ver mas proyectos y conocer mas sobre mi, visita mi github 👨‍💻 \n",
+            "https://github.com/matilop15 \n"
+        ],
+        "media":null,
+        "trigger":null
+    }
+}
