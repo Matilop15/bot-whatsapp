@@ -12,8 +12,9 @@ Whatsapp Chatbot develop as a simple save the date clone to get vaccinated.
 - First clone this repository.
 - Rename the file .env.config to .env and select and select the flow option to use `none(json)` or `dialogflow`
 - If you are going to use dialogflow, you must put the access keys in chatbot-account.json file. Watch this video: https://www.youtube.com/watch?v=dFN79tEr_bc&ab_channel=RajKapadia
-- run `node ./app.js`
-- Scan qr code
+- If you are going to use Mongodb Atlas for saving the messages, you must put your password and database name in mongoose.connect. Watch this blog: https://hevodata.com/learn/mongodb-atlas-nodejs/
+- run `node start`
+- The first time, scan qr code on console or http://localhost:3000/qr
 - Wait for the messages 
 - If you have two mobiles, you can send a messages and test the responses.
 

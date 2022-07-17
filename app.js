@@ -6,14 +6,21 @@ const { getMessages, responseMessages, botResponse } = require('./controllers/fl
 const { sendMedia, sendMessage, lastTrigger, saveChat } = require('./controllers/send');
 const { generateImage, cleanNumber } = require('./controllers/handle');
 const mongoose = require('mongoose');
-const ChatbotUserSchema = require("./adapter/mongoDb");
-
-
-
+const { saveMongo } = require("./controllers/saveMongo");
+const express = require('express');
+const cors = require('cors')
 const { searchMessageJson } = require('./controllers/searchLast');
 const { agendaname, mailagenda, respagenda, validarEmail } = require('./controllers/agendar');
 const { ConversationProfilesClient } = require('@google-cloud/dialogflow');
 const { findOne } = require('./adapter/mongoDb');
+const app = express();
+
+//mostrar el qr en localhost:3000
+app.use(cors())
+app.use(express.json())
+const server = require('http').Server(app)
+const port = process.env.PORT || 3000
+app.use('/', require('./routes/web'));
 
 /**
  * Genero un QRCODE para iniciar sesion
@@ -24,9 +31,11 @@ const client = new Client({
 
 client.initialize();
 
-client.on("qr", (qr) => {
-    qrcode.generate(qr, { small: true });
-});
+client.on("qr", qr => generateImage(qr, () => {
+    qrcode.generate(qr, { small: true })
+    console.log(`Ver QR http://localhost:${port}/qr`);
+    socketEvents.sendQR(qr);
+}));
 
 client.on("authenticated", () => {
     console.log("AUTHENTICATED");
@@ -37,12 +46,15 @@ client.on("ready", () => {
     listenMessage();
 });
 
+server.listen(port, () => {
+    console.log(`El server esta listo por el puerto ${port}`);
+})
 
 // para conectar con mongodb
-mongoose.connect('mongodb+srv://Matilop15:rDXBmI8gj0kEnN8w@dialogflowclaster.hdwtw8b.mongodb.net/Dialogflow-chatbot?retryWrites=true&w=majority'),
+mongoose.connect('mongodb+srv://Matilop15:<password>@dialogflowclaster.hdwtw8b.mongodb.net/<mongoDB>?retryWrites=true&w=majority'),
     (err, res) => {
-        if (err) return console.log("Hubo un error en la base de datos ", err);
-        console.log("BASE DE DATOS ONLINE");
+        if (err) return
+        return
     };
 
 let lastStep = "null";
@@ -82,17 +94,6 @@ const listenMessage = () => client.on('message', async msg => {
 
     // Save data mongodb
     saveMongo(number, message);
-    async function saveMongo(number, message) {
-        let chatbotUser = new ChatbotUserSchema({
-            number: number,
-            message: message
-        });
-        chatbotUser.save((err, resp) => {
-            if (err) return console.log(err);
-            console.log("Message save in Mongodb");
-            return
-        });
-    };
 
         await saveChat(number, message); //save message 
 
@@ -113,11 +114,8 @@ const listenMessage = () => client.on('message', async msg => {
         lastStep = await lastTrigger(from) || null;
         console.log(lastStep);//null no viene de paso anterior
         if (lastStep) {
-            console.log('laststep existe \n');
             const response = await responseMessages(lastStep);
-            console.log('response no existe\n');
             await sendMessage(client, from, response.replyMessage);
-            console.log('sendmensaje no funciona?\n');
         };
 
         /**
