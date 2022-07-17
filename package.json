@@ -2,11 +2,12 @@
   "name": "bot-whatsapp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Matias López",
   "license": "ISC",
   "dependencies": {
     "@google-cloud/dialogflow": "^5.1.0",
