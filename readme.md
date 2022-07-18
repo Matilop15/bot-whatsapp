@@ -68,7 +68,7 @@ Dialogflow
 - https://www.youtube.com/watch?v=dFN79tEr_bc&ab_channel=RajKapadia
 
 ## Next steps 
-- Add more functions: weater api, traslate api, etc. 
+- Add more functions: weather api, translate api, etc. 
 - Add more channels: Facebook, Slack.
 
 ## AUTHOR
