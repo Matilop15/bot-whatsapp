@@ -42,16 +42,20 @@ File | Description |
 
 ## Caputures and videos 
 
-Running bot in whatsapp
+### Welcome chatbot
+
+<img src="./img/welcomebot.png" width="250">
+
+### Running whatsapp chatbot
 
 <img src="./img/bot-working.gif" width="250">
 
-Consola bot
+### Consola chatbot
 
 <img src="./img/consola.gif" width="650">
 
 
-Dialogflow
+### Dialogflow
 
 <img src="./img/Dialogflow.gif" width="650">
 
