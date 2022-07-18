@@ -1,6 +1,6 @@
 # <img src="./img/logobot.png" width="50">  Whatsapp Chatbot
 
-Whatsapp Chatbot develop as a simple save the date clone to get vaccinated.
+Whatsapp Chatbot was developed as a simple agenda/cancel clone to get vaccinated.
 
 ## Tecnologies
 
