@@ -38,39 +38,34 @@ File | Description |
 [response.json](./flow/response.json) | Text for reply messages
 
 ## Flowchart
-<img src="./img/Flowchart.jpg" width="550">
+<img src="./img/Flowchart.jpg" width="750">
 
 ## Caputures and videos 
 
 Running bot in whatsapp
 
-<img src="./img/bot-working.gif" width="150">
+<img src="./img/bot-working.gif" width="250">
 
 Consola bot
 
-<img src="./img/consola.gif" width="350">
+<img src="./img/consola.gif" width="650">
 
 
 Dialogflow
 
-<img src="./img/Dialogflow.gif" width="350">
+<img src="./img/Dialogflow.gif" width="650">
 
 
-for create wpp client, I used ->
-https://github.com/pedroslopez/whatsapp-web.js
-
-bibliografia ->
-
-https://www.npmjs.com/
-https://wwebjs.dev/guide/ --> whatsapp nodejs
-https://www.w3schools.com/js/default.asp
-https://www.geeksforgeeks.org/javascript/?ref=lbp
-https://www.youtube.com/watch?v=dkic3MU3858&list=PL_wRgp7nihybJkFgDxd-LBZgmSIVdy3rd&ab_channel=UskoKruM2010
-https://stackoverflow.com/
-https://www.youtube.com/watch?v=lf_oFEqxxbs&list=PL_wRgp7nihyYdnV6ilQcZsfdG5d2nGWkc&ab_channel=UskoKruM2010
-https://askavy.com/
-https://dev.to/emmanuelthecoder/tutorial-create-a-whatsapp-bot-using-nodejs-and-puppeteer-1fn7
-https://www.youtube.com/watch?v=dFN79tEr_bc&ab_channel=RajKapadia
+## Sources
+- https://github.com/pedroslopez/whatsapp-web.js
+- https://www.npmjs.com/
+- https://wwebjs.dev/guide/
+- https://www.w3schools.com/js/default.asp
+- https://www.geeksforgeeks.org/javascript/?ref=lbp
+- https://www.geeksforgeeks.org/nodejs/?ref=lbp
+- https://www.youtube.com/watch?v=lf_oFEqxxbs&list=PL_wRgp7nihyYdnV6ilQcZsfdG5d2nGWkc&ab_channel=UskoKruM2010
+- https://dev.to/emmanuelthecoder/tutorial-create-a-whatsapp-bot-using-nodejs-and-puppeteer-1fn7
+- https://www.youtube.com/watch?v=dFN79tEr_bc&ab_channel=RajKapadia
 
 ## Next steps 
 - Add more functions: weater api, traslate api, etc. 
