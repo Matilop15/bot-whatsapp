@@ -11,7 +11,7 @@ Whatsapp Chatbot was developed as a simple agenda/cancel clone to get vaccinated
 ## How to use it
 
 - First clone this repository.
-- Rename the file .env.config to .env and select and select the flow option to use `none(json)` or `dialogflow`
+- Rename the file .env.config to .env and select the flow option to use `none(json)` or `dialogflow`
 - If you are going to use dialogflow, you must put the access keys in chatbot-account.json file. Watch this video: https://www.youtube.com/watch?v=dFN79tEr_bc&ab_channel=RajKapadia
 - If you are going to use Mongodb Atlas for saving the messages, you must put your password and database name in mongoose.connect. Watch this blog: https://hevodata.com/learn/mongodb-atlas-nodejs/
 - run `npm start`
