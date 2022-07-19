@@ -1,7 +1,6 @@
-const fs = require('fs');
 require('dotenv').config()
 const qrcode = require('qrcode-terminal');
-const { Client, MessageMedia, LocalAuth } = require('whatsapp-web.js');
+const { Client, LocalAuth } = require('whatsapp-web.js');
 const { getMessages, responseMessages, botResponse } = require('./controllers/flow');
 const { sendMedia, sendMessage, lastTrigger, saveChat } = require('./controllers/send');
 const { generateImage, cleanNumber } = require('./controllers/handle');
@@ -11,7 +10,6 @@ const express = require('express');
 const cors = require('cors')
 const { searchMessageJson } = require('./controllers/searchLast');
 const { agendaname, mailagenda, respagenda, validarEmail } = require('./controllers/agendar');
-const { ConversationProfilesClient } = require('@google-cloud/dialogflow');
 const { findOne } = require('./adapter/mongoDb');
 const app = express();
 
@@ -53,7 +51,10 @@ server.listen(port, () => {
 // para conectar con mongodb
 mongoose.connect('mongodb+srv://Matilop15:<password>@dialogflowclaster.hdwtw8b.mongodb.net/<mongoDB>?retryWrites=true&w=majority'),
     (err, res) => {
-        if (err) return
+        if (err) {
+            console.log(err);
+            return
+        }
         return
     };
 

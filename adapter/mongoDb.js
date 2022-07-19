@@ -7,7 +7,7 @@ const ChatbotUserSchema = new Schema(
             type: String,
             unique: true,
         },
-        message: String,
+        message: Array,
     },
     { timestamps: true }
 );
