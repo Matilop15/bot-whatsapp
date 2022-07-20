@@ -1,6 +1,8 @@
 # <img src="./img/logobot.png" width="50">  Whatsapp Chatbot
 
-Whatsapp Chatbot was developed as a simple agenda/cancel clone to get vaccinated.
+The chatbot has two functions so far, one to schedule and another to cancel the schedule.
+In addition to responding automatically following a conversation flow, it saves all the messages received in the different interactions, both in the MongoDB database and in a JSON file with the cell phone number with which the user is contacted.
+
 
 ## Tecnologies
 
@@ -11,9 +13,11 @@ Whatsapp Chatbot was developed as a simple agenda/cancel clone to get vaccinated
 ## How to use it
 
 - First clone this repository.
-- Rename the file .env.config to .env and select the flow option to use `none(json)` or `dialogflow`
-- If you are going to use dialogflow, you must put the access keys in chatbot-account.json file. Watch this video: https://www.youtube.com/watch?v=dFN79tEr_bc&ab_channel=RajKapadia
-- If you are going to use Mongodb Atlas for saving the messages, you must put your password and database name in mongoose.connect. Watch this blog: https://hevodata.com/learn/mongodb-atlas-nodejs/
+- Rename the file .env.config to .env and select the flow option to use `none = json` or `dialogflow`(default)
+- If you are going to use a self-created dialogflow, you must put the access keys in the chatbot-account.json file. Watch this video: https://www.youtube.com/watch?v=dFN79tEr_bc&ab_channel=RajKapadia
+- If you are going to use Mongodb Atlas for saving the messages, you must put your password and database name in mongoose.connect line 52 app.js file. And uncomment line 97 `(saveMongo(number, message);)`                                                                                                             
+Watch this blog: https://hevodata.com/learn/mongodb-atlas-nodejs/
+
 - run `npm start`
 - The first time, scan qr code on console or http://localhost:3000/qr
 - Wait for the messages 
