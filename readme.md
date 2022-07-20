@@ -17,11 +17,14 @@ In addition to responding automatically following a conversation flow, it saves 
 - If you are going to use a self-created dialogflow, you must put the access keys in the chatbot-account.json file. Watch this video: https://www.youtube.com/watch?v=dFN79tEr_bc&ab_channel=RajKapadia
 - If you are going to use Mongodb Atlas for saving the messages, you must put your password and database name in mongoose.connect line 52 app.js file. And uncomment line 97 `(saveMongo(number, message);)`                                                                                                             
 Watch this blog: https://hevodata.com/learn/mongodb-atlas-nodejs/
-
+- If you don´t have nodejs install you should run the following steps:
+    - Download and install Nodejs for you Operating System https://nodejs.org/en/download/
+    - Install dependencies (libraries needed to run the application, you can see them in package.json file) -> `npm install`
 - run `npm start`
 - The first time, scan qr code on console or http://localhost:3000/qr
 - Wait for the messages 
 - If you have two mobiles, you can send a messages and test the responses.
+- `CTR + C` to end the execution of the program
 
 ## File description
 
