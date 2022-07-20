@@ -13,7 +13,7 @@ In addition to responding automatically following a conversation flow, it saves 
 ## How to use it
 
 - First clone this repository -> `git clone https://github.com/Matilop15/chatbot-whatsapp.git`
-- Rename the file .env.config to .env and select the flow option to use `none = json` or `dialogflow`(default)
+- On .env file select the flow option to use `none = json` or `dialogflow`(default)
 - If you are going to use a self-created dialogflow, you must put the access keys in the chatbot-account.json file. Watch this video: https://www.youtube.com/watch?v=dFN79tEr_bc&ab_channel=RajKapadia
 - If you are going to use Mongodb Atlas for saving the messages, you must put your password and database name in mongoose.connect line 52 app.js file. And uncomment line 97 `(saveMongo(number, message);)`                                                                                                             
 Watch this blog: https://hevodata.com/learn/mongodb-atlas-nodejs/
@@ -31,7 +31,7 @@ Watch this blog: https://hevodata.com/learn/mongodb-atlas-nodejs/
 File | Description |
 ---- | ----------- | 
 [app.js](./app.js) | Core of the program, create user session, manage the flow
-[.env.config](./env.config) | Enviroment configuration
+[.env](./env) | Enviroment configuration
 [chatbot-account.json](./chatbot-account.json) | Keys to connect with dialogflow
 [dialogflow.js](./adapter/dialogflow.js) | manage the dialogflow connection
 [index.js](./adapter/index.js) | Data management and the different stages
@@ -43,6 +43,8 @@ File | Description |
 [web.js](./controllers/web.js) | Show the qrcode on localhost:3000
 [initialflow.json](./flow/initialflow.json/) | Keywords and keys for the different stages
 [response.json](./flow/response.json) | Text for reply messages
+[mongoDb.js](./adapter/mongoDb.js) | Schema for Database
+[saveMongo.js](./controllers/saveMongo.js) | Save the data in MongoDB Atlas 
 
 ## Flowchart
 <img src="./img/Flowchart.jpg" width="750">
