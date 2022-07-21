@@ -1,6 +1,8 @@
 # <img src="./img/logobot.png" width="50">  Whatsapp Chatbot
 
-Whatsapp Chatbot was developed as a simple agenda/cancel clone to get vaccinated.
+The chatbot has two functions so far, one to schedule and another to cancel the schedule.
+In addition to responding automatically following a conversation flow, it saves all the messages received in the different interactions, both in the MongoDB database and in a JSON file with the cell phone number with which the user is contacted.
+
 
 ## Tecnologies
 
@@ -10,21 +12,26 @@ Whatsapp Chatbot was developed as a simple agenda/cancel clone to get vaccinated
 
 ## How to use it
 
-- First clone this repository.
-- Rename the file .env.config to .env and select the flow option to use `none(json)` or `dialogflow`
-- If you are going to use dialogflow, you must put the access keys in chatbot-account.json file. Watch this video: https://www.youtube.com/watch?v=dFN79tEr_bc&ab_channel=RajKapadia
-- If you are going to use Mongodb Atlas for saving the messages, you must put your password and database name in mongoose.connect. Watch this blog: https://hevodata.com/learn/mongodb-atlas-nodejs/
-- run `npm start`
+- First clone this repository -> `git clone https://github.com/Matilop15/chatbot-whatsapp.git`
+- On .env file select the flow option to use `none = json` or `dialogflow`(default)
+- If you are going to use a self-created dialogflow, you must put the access keys in the chatbot-account.json file. Watch this video: https://www.youtube.com/watch?v=dFN79tEr_bc&ab_channel=RajKapadia
+- If you are going to use Mongodb Atlas for saving the messages, you must put your password and database name in mongoose.connect line 52 app.js file. And uncomment line 97 `(saveMongo(number, message);)`                                                                                                             
+Watch this blog: https://hevodata.com/learn/mongodb-atlas-nodejs/
+- If you don´t have nodejs install you should run the following steps:
+    - Download and install Nodejs for you Operating System https://nodejs.org/en/download/
+    - Install dependencies (libraries needed to run the application, you can see them in package.json file) -> `npm install`
+- run -> `npm start`
 - The first time, scan qr code on console or http://localhost:3000/qr
 - Wait for the messages 
 - If you have two mobiles, you can send a messages and test the responses.
+- `CTR + C` to end the execution of the program
 
 ## File description
 
 File | Description |
 ---- | ----------- | 
 [app.js](./app.js) | Core of the program, create user session, manage the flow
-[.env.config](./env.config) | Enviroment configuration
+[.env](./env) | Enviroment configuration
 [chatbot-account.json](./chatbot-account.json) | Keys to connect with dialogflow
 [dialogflow.js](./adapter/dialogflow.js) | manage the dialogflow connection
 [index.js](./adapter/index.js) | Data management and the different stages
@@ -36,6 +43,8 @@ File | Description |
 [web.js](./controllers/web.js) | Show the qrcode on localhost:3000
 [initialflow.json](./flow/initialflow.json/) | Keywords and keys for the different stages
 [response.json](./flow/response.json) | Text for reply messages
+[mongoDb.js](./adapter/mongoDb.js) | Schema for Database
+[saveMongo.js](./controllers/saveMongo.js) | Save the data in MongoDB Atlas 
 
 ## Flowchart
 <img src="./img/Flowchart.jpg" width="750">
